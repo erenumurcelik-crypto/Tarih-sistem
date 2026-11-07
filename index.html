@@ -2,40 +2,165 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarih Dünyası</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #101827;
-            color: white;
-            text-align: center;
-        }
-        header {
-            background: #172554;
-            padding: 30px;
-        }
-        h1 {
-            color: #facc15;
-        }
-        main {
-            padding: 30px 15px;
-        }
-        .kart {
-            background: #243247;
-            padding: 25px;
-            margin: 20px auto;
-            border-radius: 15px;
-            max-width: 500px;
-        }
-        footer {
-            padding: 20px;
-            color: #aaa;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarih Dünyası | Eğitim Platformu</title>
+<meta name="description" content="Tarih Dünyası 9. sınıf tarih eğitim platformu">
+
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1220;
+    color: white;
+}
+
+header {
+    background: linear-gradient(135deg,#172554,#0f172a);
+    padding: 45px 20px;
+    text-align: center;
+    border-bottom: 2px solid #c9a227;
+}
+
+header h1 {
+    color: #facc15;
+    font-size: 38px;
+    margin: 0;
+}
+
+header p {
+    color: #cbd5e1;
+    margin-top: 12px;
+}
+
+nav {
+    background: #172554;
+    padding: 15px 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #334155;
+}
+
+nav a {
+    color: #facc15;
+    text-decoration: none;
+    margin: 8px 12px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(180deg,#172554,#0b1220);
+}
+
+.hero h2 {
+    color: #facc15;
+    font-size: 30px;
+}
+
+.hero p {
+    color: #cbd5e1;
+    max-width: 650px;
+    margin: 15px auto;
+    line-height: 1.8;
+}
+
+.bolum-baslik {
+    text-align: center;
+    color: #facc15;
+    margin: 45px 10px 25px;
+    font-size: 26px;
+}
+
+main {
+    padding: 20px 15px 50px;
+}
+
+.kartlar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 22px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.kart {
+    background: #1e293b;
+    padding: 27px;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.kart:hover {
+    transform: translateY(-5px);
+    border-color: #facc15;
+    box-shadow: 0 10px 25px #0005;
+}
+
+.kart h2 {
+    color: #facc15;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.kart p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.kart b {
+    color: #facc15;
+}
+
+footer {
+    background: #111c32;
+    padding: 30px 15px;
+    text-align: center;
+    color: #94a3b8;
+    border-top: 1px solid #334155;
+}
+
+footer strong {
+    color: #facc15;
+}
+
+@media(max-width:600px) {
+    header h1 {
+        font-size: 29px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    nav a {
+        font-size: 12px;
+        margin: 7px;
+    }
+
+    .kart {
+        padding: 22px;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <header>
@@ -43,57 +168,126 @@
     <p>Geçmişi öğren, geleceği keşfet!</p>
 </header>
 
+<nav>
+    <a href="#anasayfa">Ana Sayfa</a>
+    <a href="#dersler">Dersler</a>
+    <a href="#tarih">Tarih Bilimi</a>
+    <a href="#kaynaklar">Kaynaklar</a>
+</nav>
+
+<section class="hero" id="anasayfa">
+    <h2>Tarihin Kapılarını Arala!</h2>
+    <p>
+        İnsanlığın geçmişini keşfet, tarihî bilgilerini geliştir
+        ve öğrenmeye başla. Tarih Dünyası'na hoş geldin!
+    </p>
+</section>
+
 <main>
+
+<h2 class="bolum-baslik" id="dersler">
+    📚 Eğitim Platformu
+</h2>
+
+<div class="kartlar">
+
     <div class="kart">
         <h2>📜 Tarihe Hoş Geldin!</h2>
-        <p>Tarih, geçmişte yaşamış insanların
-        faaliyetlerini inceleyen bilim dalıdır.</p>
+        <p>
+            Tarih, geçmişte yaşamış insanların
+            faaliyetlerini inceleyen bilim dalıdır.
+        </p>
     </div>
 
     <div class="kart">
         <h2>🌍 Tarihin Önemi</h2>
-        <p>Tarih sayesinde geçmişimizi öğrenir,
-        bugünü daha iyi anlarız.</p>
+        <p>
+            Tarih sayesinde geçmişimizi öğrenir,
+            bugünü daha iyi anlarız.
+        </p>
     </div>
 
     <div class="kart">
         <h2>📚 9. Sınıf Tarih</h2>
-        <p>Tarih bilimi, kaynaklar ve geçmişten
-        günümüze insanlık.</p>
-
+        <p>
+            Tarih bilimi, kaynaklar ve geçmişten
+            günümüze insanlık.
+        </p>
     </div>
+
+</div>
+
+<h2 class="bolum-baslik" id="tarih">
+    📖 Tarih Bilimi
+</h2>
+
+<div class="kartlar">
 
     <div class="kart">
         <h2>📖 Tarih Nedir?</h2>
-        <p>Tarih, geçmişte yaşamış insan topluluklarının faaliyetlerini yer ve zaman göstererek, neden-sonuç ilişkisi içerisinde inceleyen bilim dalıdır.</p>
+        <p>
+            Tarih, geçmişte yaşamış insan topluluklarının
+            faaliyetlerini yer ve zaman göstererek,
+            neden-sonuç ilişkisi içerisinde inceleyen bilim dalıdır.
+        </p>
     </div>
 
     <div class="kart">
         <h2>📚 Tarih Biliminin Konusu</h2>
-        <p>Tarih bilimi, geçmişte yaşamış insan topluluklarının siyasi, sosyal, ekonomik ve kültürel faaliyetlerini inceler.</p>
+        <p>
+            Tarih bilimi, geçmişte yaşamış insan topluluklarının
+            siyasi, sosyal, ekonomik ve kültürel faaliyetlerini inceler.
+        </p>
     </div>
-<div class="kart">
-    <h2>🔍 Tarih Biliminin Yöntemi</h2>
-    <p>Tarihçiler geçmişi araştırırken kaynakları inceler, bilgileri karşılaştırır, olayları değerlendirir ve sonuçlara ulaşır.</p>
+
+    <div class="kart">
+        <h2>🔍 Tarih Biliminin Yöntemi</h2>
+        <p>
+            Tarihçiler geçmişi araştırırken kaynakları inceler,
+            bilgileri karşılaştırır, olayları değerlendirir
+            ve sonuçlara ulaşır.
+        </p>
+    </div>
+
 </div>
+
+<h2 class="bolum-baslik" id="kaynaklar">
+    📜 Tarihî Kaynaklar
+</h2>
+
+<div class="kartlar">
 
     <div class="kart">
         <h2>📜 Tarihî Kaynaklar</h2>
-        <p>Tarihî kaynaklar, geçmiş hakkında bilgi edinmemizi sağlayan belge ve kalıntılardır.</p>
-        <p><b>Yazılı Kaynaklar:</b> Kitabeler, fermanlar ve mektuplar.</p>
-        <p><b>Sözlü Kaynaklar:</b> Destanlar, efsaneler ve halk hikâyeleri.</p>
-        <p><b>Görsel Kaynaklar:</b> Fotoğraflar, resimler ve haritalar.</p>
-        <p><b>Arkeolojik Kaynaklar:</b> Eski araçlar, silahlar ve çanak çömlekler.</p>
+        <p>
+            Tarihî kaynaklar, geçmiş hakkında bilgi
+            edinmemizi sağlayan belge ve kalıntılardır.
+        </p>
+        <p><b>Yazılı:</b> Kitabeler, fermanlar ve mektuplar.</p>
+        <p><b>Sözlü:</b> Destanlar, efsaneler ve halk hikâyeleri.</p>
+        <p><b>Görsel:</b> Fotoğraflar, resimler ve haritalar.</p>
+        <p><b>Arkeolojik:</b> Eski araçlar, silahlar ve çanak çömlekler.</p>
     </div>
 
     <div class="kart">
         <h2>⭐ Tarih Biliminin Önemi</h2>
-        <p>Tarih, toplumların geçmişini tanımasını, kültürel değerlerini korumasını ve geçmişte yaşananlardan ders çıkarmasını sağlar.</p>
+        <p>
+            Tarih, toplumların geçmişini tanımasını,
+            kültürel değerlerini korumasını ve
+            geçmişte yaşananlardan ders çıkarmasını sağlar.
+        </p>
     </div>
- </main>
 
+</div>
 
+</main>
 
+<footer>
+    <p><strong>🏛️ Tarih Dünyası</strong></p>
+    <p>Geçmişi öğren, geleceği keşfet!</p>
+    <p>© 2026 Tarih Dünyası</p>
+</footer>
 
 </body>
 </html>
+
