@@ -5,162 +5,274 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tarih Dünyası | 9. Sınıf Tarih</title>
+
 <style>
-:root {
-  --bg:#0b1220;
-  --panel:#142238;
-  --panel2:#1b2d46;
-  --gold:#e9bd63;
-  --text:#f4f5f7;
-  --muted:#b9c5d5;
-  --border:#30445f;
+:root{
+  --bg:#091321;
+  --panel:#14243a;
+  --panel2:#1b304b;
+  --gold:#ffd166;
+  --cyan:#4dd0e1;
+  --purple:#b388ff;
+  --green:#69db9b;
+  --pink:#ff8fab;
+  --white:#f4f7fb;
+  --muted:#c1ccda;
+  --border:#30445e;
 }
-* {box-sizing:border-box;scroll-behavior:smooth}
-body {
+
+*{box-sizing:border-box;scroll-behavior:smooth}
+
+body{
   margin:0;
   font-family:Arial,sans-serif;
   background:var(--bg);
-  color:var(--text);
+  color:var(--white);
   line-height:1.7;
 }
-header {
-  padding:48px 18px;
+
+header{
+  background:linear-gradient(120deg,#14243a,#263d5c,#17243b);
+  padding:35px 20px;
   text-align:center;
-  background:linear-gradient(135deg,#101c30,#263b57);
   border-bottom:3px solid var(--gold);
 }
-header h1 {
+
+header h1{
   color:var(--gold);
-  font-size:clamp(32px,6vw,48px);
-  margin:0;
+  font-size:38px;
+  margin:0 0 8px;
 }
-header p {color:var(--muted)}
-nav {
+
+header p{color:var(--muted);margin:0}
+
+nav{
   position:sticky;
   top:0;
   z-index:10;
-  background:#101b2d;
-  border-bottom:1px solid var(--border);
+  background:#101e30;
   padding:12px;
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
-  gap:8px;
+  gap:9px;
+  border-bottom:1px solid var(--border);
 }
-nav a {
+
+nav a{
   color:white;
   text-decoration:none;
-  padding:8px 12px;
-  border-radius:8px;
+  padding:8px 13px;
+  border-radius:20px;
+  background:#20344e;
   font-size:14px;
+  transition:.2s;
 }
-nav a:hover {background:var(--gold);color:#172033}
-main {max-width:1050px;margin:auto;padding:22px}
-section {
+
+nav a:hover{
+  background:var(--gold);
+  color:#101820;
+}
+
+main{
+  width:min(1150px,92%);
+  margin:30px auto;
+}
+
+section{
   background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:15px;
   padding:25px;
-  margin:24px 0;
+  margin-bottom:28px;
+  border-radius:18px;
+  border:1px solid var(--border);
   scroll-margin-top:85px;
 }
-h2 {color:var(--gold);margin-top:0}
-h3 {color:#f2d28e;margin-top:24px}
-p {color:var(--muted)}
-strong {color:#fff}
-.hero {
-  text-align:center;
-  padding:45px 25px;
-  background:linear-gradient(135deg,#1a2b43,#263e5c);
+
+h2{
+  color:var(--gold);
+  font-size:27px;
+  margin-top:0;
+  border-bottom:1px solid var(--border);
+  padding-bottom:10px;
 }
-.hero h2 {font-size:30px}
-.grid {
+
+h3{color:var(--cyan)}
+
+p{color:var(--muted)}
+
+.hero{
+  text-align:center;
+  padding:35px 25px;
+  background:linear-gradient(135deg,#172d49,#30284b);
+}
+
+.hero h2{
+  border:0;
+  font-size:34px;
+}
+
+.hero p{
+  max-width:750px;
+  margin:15px auto;
+  font-size:17px;
+}
+
+.hero img{
+  max-height:330px;
+}
+
+.topic-photo{
+  width:100%;
+  max-height:300px;
+  object-fit:cover;
+  border-radius:13px;
+  margin:10px 0 18px;
+  border:1px solid var(--border);
+}
+
+.grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
-}
-.card {
-  background:var(--panel2);
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:17px;
-}
-.card h3 {margin-top:0}
-.note {
-  background:#263b50;
-  border-left:4px solid var(--gold);
-  padding:14px;
+  gap:16px;
   margin:18px 0;
-  border-radius:7px;
-  color:#fff;
 }
-.tag {
-  display:inline-block;
-  color:#172033;
-  background:var(--gold);
-  padding:4px 10px;
-  border-radius:20px;
-  font-size:12px;
+
+.card{
+  background:var(--panel2);
+  padding:17px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  transition:.2s;
+  overflow:hidden;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  border-color:var(--gold);
+}
+
+.card img{
+  width:100%;
+  height:145px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+.card h3{margin:5px 0;color:var(--gold)}
+.card p{margin-bottom:0}
+
+.number{
+  color:var(--pink);
   font-weight:bold;
 }
-table {width:100%;border-collapse:collapse;margin:18px 0}
-th,td {
+
+.note{
+  background:#263a50;
+  border-left:4px solid var(--gold);
+  padding:15px;
+  border-radius:8px;
+  margin:20px 0;
+  color:var(--white);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:18px 0;
+  overflow:hidden;
+}
+
+th,td{
   border:1px solid var(--border);
   padding:11px;
   text-align:left;
 }
-th {background:#263b57;color:var(--gold)}
-td {color:var(--muted)}
-button {
+
+th{
+  background:#263d59;
+  color:var(--gold);
+}
+
+td{color:var(--muted)}
+
+ul{color:var(--muted)}
+li{margin:7px 0}
+
+.science-card img{height:135px}
+
+.question{
+  background:var(--panel2);
+  padding:17px;
+  margin:15px 0;
+  border-radius:12px;
+  border:1px solid var(--border);
+}
+
+.question strong{
+  display:block;
+  color:var(--gold);
+  margin-bottom:10px;
+}
+
+.question label{
+  display:block;
+  padding:5px;
+  color:var(--muted);
+  cursor:pointer;
+}
+
+.question input{margin-right:8px}
+
+button{
   background:var(--gold);
-  color:#182234;
+  color:#111c2b;
   border:0;
-  padding:12px 18px;
-  border-radius:8px;
+  padding:12px 20px;
+  border-radius:9px;
   font-weight:bold;
   cursor:pointer;
   margin:8px 5px 8px 0;
 }
-button:hover {background:#f6d58e}
-.question {
-  background:var(--panel2);
-  padding:17px;
-  margin:15px 0;
+
+button:hover{background:var(--cyan)}
+
+#result{
+  margin-top:15px;
+  padding:15px;
   border-radius:10px;
-}
-.question label {
-  display:block;
-  color:var(--muted);
-  margin:8px 0;
-  cursor:pointer;
-}
-#result {
-  font-size:19px;
-  color:var(--gold);
+  background:#263d59;
   font-weight:bold;
-  margin-top:18px;
+  color:var(--white);
 }
-footer {
+
+footer{
+  background:#101e30;
   text-align:center;
-  padding:30px 15px;
+  padding:25px;
   color:var(--muted);
-  border-top:1px solid var(--border);
+  border-top:2px solid var(--gold);
 }
-@media(max-width:600px) {
-  main {padding:12px}
-  section {padding:17px}
-  nav {gap:3px}
-  nav a {font-size:12px;padding:7px}
-  table {font-size:13px}
-  th,td {padding:7px}
+
+footer strong{color:var(--gold)}
+
+@media(max-width:600px){
+  header h1{font-size:29px}
+  .hero h2{font-size:27px}
+  section{padding:17px}
+  h2{font-size:23px}
+  nav a{font-size:12px;padding:7px 9px}
+  table{font-size:13px}
+  th,td{padding:7px}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1>🏛️ Tarih Dünyası</h1>
-  <p>Geçmişi öğren, bugünü anla, geleceğe ışık tut.</p>
+  <h1>🏛️ TARİH DÜNYASI</h1>
+  <p>Geçmişi öğren, bugünü anla, geleceği keşfet!</p>
 </header>
 
 <nav>
@@ -168,303 +280,415 @@ footer {
   <a href="#unite">1. Ünite</a>
   <a href="#faydalar">Tarihin Faydaları</a>
   <a href="#doga">Tarihin Doğası</a>
-  <a href="#uretim">Bilginin Üretimi</a>
+  <a href="#yardimci">Yardımcı Bilimler</a>
+  <a href="#uretim">Tarihsel Bilgi</a>
   <a href="#dijital">Dijitalleşme</a>
-  <a href="#test">Ünite Testi</a>
+  <a href="#test">Test</a>
 </nav>
 
 <main>
 
-<section class="hero" id="anasayfa">
-  <span class="tag">9. SINIF TARİH</span>
-  <h2>Tarihe Hoş Geldin!</h2>
+<!-- ANA SAYFA -->
+
+<section id="anasayfa" class="hero">
+  <h2>Geçmişin Kapılarını Arala!</h2>
+
+  <img class="topic-photo"
+  src="https://images.unsplash.com/photo-1461360228754-6e81c478b882?auto=format&fit=crop&w=1200&q=80"
+  alt="Tarihî kitaplar ve belgeler" loading="lazy">
+
   <p>
-    Tarih, yalnızca geçmişte yaşanan olayları öğrenmek değildir.
-    İnsanların nasıl yaşadığını, toplumların nasıl değiştiğini
-    ve bugünkü dünyamızın nasıl oluştuğunu anlamamızı sağlar.
+    Tarih Dünyası'na hoş geldin! Bu platformda tarih biliminin
+    temel özelliklerini, yardımcı bilim dallarını ve tarihsel
+    araştırma yöntemlerini kolayca öğrenebilirsin.
   </p>
-  <p>Bu yolculukta geçmişin izlerini birlikte keşfedeceğiz.</p>
-</section>
-
-<section id="unite">
-  <h2>📚 1. Ünite: Geçmişin İnşa Sürecinde Tarih</h2>
-  <p>
-    Bu ünitede tarih öğrenmenin faydalarını, tarihin özelliklerini,
-    tarihsel bilginin nasıl üretildiğini ve dijital teknolojilerin
-    tarih araştırmalarına katkılarını öğreneceğiz.
-  </p>
-  <div class="grid">
-    <div class="card">
-      <h3>01. Tarih Öğrenmenin Faydaları</h3>
-      <p>Tarih öğrenmenin bireye ve topluma katkıları.</p>
-    </div>
-    <div class="card">
-      <h3>02. Tarihin Doğası</h3>
-      <p>Tarih, olay, olgu, zaman ve kanıt kavramları.</p>
-    </div>
-    <div class="card">
-      <h3>03. Tarihsel Bilginin Üretimi</h3>
-      <p>Tarihçilerin araştırma ve inceleme aşamaları.</p>
-    </div>
-    <div class="card">
-      <h3>04. Tarih ve Dijitalleşme</h3>
-      <p>Teknolojinin tarih araştırmalarına etkisi.</p>
-    </div>
-  </div>
-</section>
-
-<section id="faydalar">
-  <h2>1. Tarih Öğrenmenin Faydaları</h2>
-  <p>
-    Tarih, insanların geçmişte yaşadıklarını inceleyerek toplumların
-    gelişimini anlamamızı sağlayan bir bilim dalıdır.
-  </p>
-
-  <h3>Birey Açısından Faydaları</h3>
-  <ul>
-    <li>Kişinin geçmişini ve kültürünü tanımasını sağlar.</li>
-    <li>Geçmişte yapılan hatalardan ders çıkarmaya yardımcı olur.</li>
-    <li>Araştırma ve sorgulama becerisini geliştirir.</li>
-    <li>Farklı toplumlara ve kültürlere saygı duymayı öğretir.</li>
-  </ul>
-
-  <h3>Toplum Açısından Faydaları</h3>
-  <ul>
-    <li>Toplumsal birlik ve beraberliği güçlendirir.</li>
-    <li>Kültürel mirasın korunmasına katkı sağlar.</li>
-    <li>Toplumların değişimini anlamamıza yardımcı olur.</li>
-    <li>Ortak geçmiş ve kültür bilincini geliştirir.</li>
-  </ul>
 
   <div class="note">
-    <strong>Akılda Kalsın:</strong>
-    Tarih öğrenmek, geçmişi ezberlemekten çok geçmişten anlam
-    çıkarmak ve bugünü daha iyi değerlendirmektir.
+    📖 9. sınıf tarih dersi 1. ünite için hazırlanmış
+    görselli ve kolay anlaşılır öğrenme alanı.
   </div>
 </section>
 
-<section id="doga">
-  <h2>2. Tarihin Doğası</h2>
+<!-- ÜNİTE TANITIMI -->
+
+<section id="unite">
+  <h2>📜 1. Ünite: Geçmişin İnşa Sürecinde Tarih</h2>
+
+  <img class="topic-photo"
+  src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1100&q=80"
+  alt="Tarih kitapları bulunan kütüphane" loading="lazy">
+
   <p>
-    Tarih; geçmişte yaşamış insan topluluklarının faaliyetlerini,
-    yer ve zaman göstererek, neden-sonuç ilişkisi içinde
-    kaynaklara dayanarak inceleyen bilim dalıdır.
+    İnsanlar geçmişten beri yaşadıkları olayları anlamaya
+    ve gelecek nesillere aktarmaya çalışmıştır. Tarih bilimi,
+    geçmişte yaşamış insan topluluklarının faaliyetlerini
+    yer ve zaman göstererek, neden-sonuç ilişkisi içinde inceler.
   </p>
 
-  <h3>Temel Tarih Kavramları</h3>
   <div class="grid">
     <div class="card">
-      <h3>Olay</h3>
-      <p>
-        Kısa sürede gerçekleşen, başlangıcı ve bitişi belli olan
-        gelişmelerdir. Örnek: İstanbul'un Fethi.
-      </p>
+      <h3>📅 Zaman</h3>
+      <p>Olayların hangi dönemde gerçekleştiğini belirtir.</p>
     </div>
     <div class="card">
-      <h3>Olgu</h3>
-      <p>
-        Uzun bir süreç içinde ortaya çıkan gelişmelerdir.
-        Örnek: Anadolu'nun Türkleşmesi.
-      </p>
+      <h3>🌍 Yer</h3>
+      <p>Olayların nerede gerçekleştiğini gösterir.</p>
     </div>
     <div class="card">
-      <h3>Kronoloji</h3>
-      <p>
-        Tarihî olayların zaman sırasına göre dizilmesidir.
-      </p>
+      <h3>🔗 Neden-Sonuç</h3>
+      <p>Olayların ortaya çıkış sebeplerini ve sonuçlarını açıklar.</p>
     </div>
+  </div>
+</section>
+
+<!-- TARİHİN FAYDALARI -->
+
+<section id="faydalar">
+  <h2>⭐ Tarih Öğrenmenin Faydaları</h2>
+
+  <img class="topic-photo"
+  src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=1100&q=80"
+  alt="Tarih ve araştırma kitapları" loading="lazy">
+
+  <p>
+    Tarih öğrenmek yalnızca geçmişte yaşanan olayları bilmek
+    değildir. Aynı zamanda insanlara ve toplumlara önemli
+    kazanımlar sağlar.
+  </p>
+
+  <h3>👤 Bireye Faydaları</h3>
+
+  <div class="grid">
     <div class="card">
-      <h3>Neden-Sonuç</h3>
-      <p>
-        Bir olayın hangi sebeplerle ortaya çıktığını ve
-        hangi sonuçları doğurduğunu incelemektir.
-      </p>
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80" alt="Kitap okuyan kişi" loading="lazy">
+      <h3>Bilgi Kazandırır</h3>
+      <p>Geçmişte yaşanan olayları öğrenmemizi sağlar.</p>
     </div>
+
     <div class="card">
-      <h3>Kanıt</h3>
-      <p>
-        Geçmiş hakkında bilgi edinmemizi sağlayan belge,
-        buluntu ve diğer izlerdir.
-      </p>
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="Eğitim" loading="lazy">
+      <h3>Düşünmeyi Geliştirir</h3>
+      <p>Olayları sorgulama ve değerlendirme becerimizi artırır.</p>
     </div>
+
     <div class="card">
-      <h3>Tarihçi</h3>
-      <p>
-        Geçmişi kaynaklara dayanarak araştıran ve yorumlayan kişidir.
-      </p>
+      <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=600&q=80" alt="Dünya haritası" loading="lazy">
+      <h3>Kimlik Kazandırır</h3>
+      <p>Kendi geçmişimizi ve kültürümüzü tanımamıza yardımcı olur.</p>
     </div>
   </div>
 
-  <h3>Tarihe Yardımcı Bilim Dalları</h3>
+  <h3>🏛️ Topluma Faydaları</h3>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=600&q=80" alt="Tarihî yapı" loading="lazy">
+      <h3>Millî Bilinç</h3>
+      <p>Toplumda ortak geçmiş ve aidiyet duygusunu güçlendirir.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80" alt="Bir arada insanlar" loading="lazy">
+      <h3>Toplumsal Birlik</h3>
+      <p>Ortak değerlerin ve kültürel bağların korunmasına katkı sağlar.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80" alt="Doğa ve manzara" loading="lazy">
+      <h3>Geçmişten Ders</h3>
+      <p>Geçmişteki başarı ve hatalardan yararlanmamızı sağlar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TARİHİN DOĞASI -->
+
+<section id="doga">
+  <h2>🔎 Tarih Biliminin Doğası</h2>
+
+  <img class="topic-photo"
+  src="https://images.unsplash.com/photo-1461360228754-6e81c478b882?auto=format&fit=crop&w=1100&q=80"
+  alt="Tarihî belgeler" loading="lazy">
+
   <p>
-    Tarihçiler geçmişi araştırırken farklı bilim dallarından
-    yararlanırlar. Bu bilimler, tarihî bilgilerin daha doğru
-    değerlendirilmesine yardımcı olur.
+    Tarih, geçmişte yaşanan insan faaliyetlerini belgelere
+    ve kanıtlara dayanarak inceleyen bir bilim dalıdır.
+    Tarihçi, elde ettiği bilgileri sorgular ve değerlendirir.
   </p>
 
   <div class="grid">
     <div class="card">
-      <h3>🏺 Arkeoloji</h3>
-      <p>
-        Geçmişte yaşamış insanlardan kalan maddi kalıntıları
-        kazılar ve bilimsel incelemeler yoluyla araştırır.
-      </p>
-      <p><strong>Örnek:</strong> Eski yerleşim yerleri, evler ve araç gereçler.</p>
+      <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80" alt="Takvim" loading="lazy">
+      <h3>Olay</h3>
+      <p>Kısa sürede gerçekleşen, başlangıç ve bitiş zamanı belli olan gelişmelerdir.</p>
+      <p><strong>Örnek:</strong> İstanbul'un Fethi.</p>
     </div>
 
     <div class="card">
-      <h3>🪙 Nümismatik</h3>
-      <p>
-        Eski paraları inceler. Paraların üzerindeki yazılar,
-        resimler, hükümdar adları ve yapıldıkları madenler
-        geçmiş hakkında bilgi verir.
-      </p>
-      <p><strong>Örnek:</strong> Bir hükümdar döneminde basılan paralar.</p>
+      <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=600&q=80" alt="Tarihî şehir" loading="lazy">
+      <h3>Olgu</h3>
+      <p>Uzun bir zaman içinde ortaya çıkan ve devam eden gelişmelerdir.</p>
+      <p><strong>Örnek:</strong> Anadolu'nun Türkleşmesi.</p>
     </div>
 
     <div class="card">
-      <h3>🎭 Etnografya</h3>
-      <p>
-        Toplumların geleneklerini, göreneklerini, yaşam biçimlerini
-        ve kültürel özelliklerini inceler.
-      </p>
-      <p><strong>Örnek:</strong> Geleneksel kıyafetler ve düğün törenleri.</p>
+      <img src="https://images.unsplash.com/photo-1501139083538-0139583c060f?auto=format&fit=crop&w=600&q=80" alt="Saat" loading="lazy">
+      <h3>Kronoloji</h3>
+      <p>Olayların zaman sırasına göre düzenlenmesidir.</p>
     </div>
 
     <div class="card">
-      <h3>✍️ Paleografya</h3>
-      <p>
-        Geçmiş dönemlerde kullanılan yazı türlerini inceler
-        ve eski yazılı belgelerin okunmasına yardımcı olur.
-      </p>
-      <p><strong>Örnek:</strong> Eski el yazması belgeler.</p>
+      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80" alt="Çalışma ortamı" loading="lazy">
+      <h3>Neden-Sonuç</h3>
+      <p>Bir olayın hangi sebeple ortaya çıktığını ve ne gibi sonuçlar doğurduğunu inceler.</p>
     </div>
 
     <div class="card">
-      <h3>🪨 Epigrafi</h3>
-      <p>
-        Taş, mermer ve benzeri sert yüzeyler üzerine yazılmış
-        kitabeleri ve yazıtları inceler.
-      </p>
-      <p><strong>Örnek:</strong> Orhun Yazıtları.</p>
+      <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80" alt="Kitap ve belge" loading="lazy">
+      <h3>Kanıt</h3>
+      <p>Geçmiş hakkında bilgi edinmemizi sağlayan kaynak ve bulgulardır.</p>
     </div>
 
     <div class="card">
-      <h3>📅 Kronoloji</h3>
-      <p>
-        Tarihî olayların zamanını belirler ve olayları
-        oluş sırasına göre düzenler.
-      </p>
-      <p><strong>Örnek:</strong> Tarihî olayları yıllara göre sıralamak.</p>
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80" alt="Araştırmacı" loading="lazy">
+      <h3>Tarihçi</h3>
+      <p>Geçmişi kaynak ve kanıtlardan yararlanarak araştıran kişidir.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Unutma:</strong> Tarihî bilgiler kanıtlara dayanır.
+    Tarihçi geçmişi incelerken tarafsız ve eleştirel olmaya çalışır.
+  </div>
+</section>
+
+<!-- YARDIMCI BİLİMLER -->
+
+<section id="yardimci">
+  <h2>🧠 Tarihe Yardımcı Bilim Dalları</h2>
+
+  <img class="topic-photo"
+  src="https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=1100&q=80"
+  alt="Müze ve tarihî eserler" loading="lazy">
+
+  <p>
+    Tarihçiler geçmişi araştırırken farklı bilim dallarından
+    yararlanırlar. Bu bilimler tarihî olayların daha doğru
+    anlaşılmasına yardımcı olur.
+  </p>
+
+  <div class="grid">
+
+    <div class="card science-card">
+      <img src="https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=600&q=80" alt="Arkeolojik kazı" loading="lazy">
+      <h3>1. Arkeoloji</h3>
+      <p>Geçmiş uygarlıklardan kalan maddi kalıntıları kazılar yoluyla inceler.</p>
+      <p><strong>Örnek:</strong> Eski yerleşim yerleri, seramikler ve yapılar.</p>
     </div>
 
-    <div class="card">
-      <h3>🌍 Coğrafya</h3>
-      <p>
-        İnsanların yaşadığı çevrenin özelliklerini ve
-        coğrafi şartların tarihî olaylara etkisini inceler.
-      </p>
+    <div class="card science-card">
+      <img src="https://images.unsplash.com/photo-1524666041070-9a87656c25bb?auto=format&fit=crop&w=600&q=80" alt="Toplum" loading="lazy">
+      <h3>2. Sosyoloji</h3>
+      <p>Toplumları, toplumsal ilişkileri ve değişimleri inceler.</p>
+      <p><strong>Örnek:</strong> Geçmiş toplumların sosyal yapısı.</p>
+    </div>
+
+    <div class="card science-card">
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80" alt="Eski belge" loading="lazy">
+      <h3>3. Diplomatik</h3>
+      <p>Tarihî belgelerin biçimini, içeriğini ve güvenilirliğini inceler.</p>
+      <p><strong>Örnek:</strong> Fermanlar ve antlaşmalar.</p>
+    </div>
+
+    <div class="card science-card">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Dağlar ve coğrafya" loading="lazy">
+      <h3>4. Coğrafya</h3>
+      <p>İnsanların yaşadığı çevreyi ve doğal koşulların tarih üzerindeki etkisini inceler.</p>
       <p><strong>Örnek:</strong> İklimin yerleşimlere etkisi.</p>
     </div>
 
-    <div class="card">
-      <h3>🧬 Antropoloji</h3>
-      <p>
-        İnsanları fiziksel ve kültürel yönleriyle inceleyen
-        bilim dalıdır. İnsan topluluklarının geçmişini
-        anlamaya katkı sağlar.
-      </p>
-      <p><strong>Örnek:</strong> Eski insan kalıntılarının incelenmesi.</p>
+    <div class="card science-card">
+      <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=600&q=80" alt="Taş yazıt" loading="lazy">
+      <h3>5. Epigrafi</h3>
+      <p>Taş, mermer ve metal gibi sert yüzeylerdeki yazıtları inceler.</p>
+      <p><strong>Örnek:</strong> Orhun Yazıtları.</p>
     </div>
+
+    <div class="card science-card">
+      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="İnsan" loading="lazy">
+      <h3>6. Antropoloji</h3>
+      <p>İnsanı, insanın kökenini ve fiziksel-kültürel özelliklerini araştırır.</p>
+      <p><strong>Örnek:</strong> Eski insan kalıntıları.</p>
+    </div>
+
+    <div class="card science-card">
+      <img src="https://images.unsplash.com/photo-1621768216002-5ac171876625?auto=format&fit=crop&w=600&q=80" alt="Eski madeni para" loading="lazy">
+      <h3>7. Nümismatik</h3>
+      <p>Eski paraları inceler. Paraların üzerindeki yazıları, hükümdarları, sembolleri, resimleri, yapıldıkları madenleri ve dönemlerini araştırır.</p>
+      <p><strong>Önemi:</strong> Devletlerin ekonomik durumu, ticareti, siyasi gücü ve hükümdarları hakkında bilgi verir.</p>
+    </div>
+
+    <div class="card science-card">
+      <img src="https://images.unsplash.com/photo-1501139083538-0139583c060f?auto=format&fit=crop&w=600&q=80" alt="Saat ve zaman" loading="lazy">
+      <h3>8. Kronoloji</h3>
+      <p>Tarihî olayların zamanını belirler ve olayları oluş sırasına koyar.</p>
+      <p><strong>Örnek:</strong> Tarih şeritleri ve takvimler.</p>
+    </div>
+
+    <div class="card science-card">
+      <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80" alt="Kimya laboratuvarı" loading="lazy">
+      <h3>9. Kimya</h3>
+      <p>Tarihî eserlerin yapıldığı maddeleri ve kimyasal özelliklerini incelemeye yardımcı olur.</p>
+      <p><strong>Örnek:</strong> Eski eserlerde kullanılan boya ve madenlerin analizi.</p>
+    </div>
+
+    <div class="card science-card">
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80" alt="Yazılı metin" loading="lazy">
+      <h3>10. Filoloji</h3>
+      <p>Dilleri ve yazılı eserleri dil yönünden inceler.</p>
+      <p><strong>Örnek:</strong> Eski metinlerin dil özellikleri.</p>
+    </div>
+
+    <div class="card science-card">
+      <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80" alt="Gelenekler ve insanlar" loading="lazy">
+      <h3>11. Etnografya</h3>
+      <p>Toplumların geleneklerini, göreneklerini ve yaşam biçimlerini inceler.</p>
+      <p><strong>Örnek:</strong> Geleneksel kıyafetler ve düğünler.</p>
+    </div>
+
+    <div class="card science-card">
+      <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80" alt="Eski el yazması" loading="lazy">
+      <h3>12. Paleografi</h3>
+      <p>Geçmiş dönemlerde kullanılan yazı türlerini ve el yazılarını inceler.</p>
+      <p><strong>Örnek:</strong> Eski yazılı belgelerin okunması.</p>
+    </div>
+
+    <div class="card science-card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt="Arma ve sembol" loading="lazy">
+      <h3>13. Heraldik</h3>
+      <p>Devletlerin, ailelerin ve kurumların arma ve sembollerini inceler.</p>
+      <p><strong>Örnek:</strong> Tarihî armalar ve hanedan sembolleri.</p>
+    </div>
+
   </div>
 
   <div class="note">
-    <strong>Önemli:</strong>
-    Nümismatik eski paraları, arkeoloji maddi kalıntıları,
-    etnografya ise toplumların kültürel özelliklerini inceler.
-    Bu üç bilim dalını birbirine karıştırmamaya dikkat et!
+    <strong>Karıştırma!</strong><br>
+    Nümismatik = Para<br>
+    Epigrafi = Yazıt<br>
+    Paleografi = Eski yazı<br>
+    Arkeoloji = Maddi kalıntılar<br>
+    Kronoloji = Zaman sırası
   </div>
 </section>
 
+<!-- TARİHSEL BİLGİ -->
+
 <section id="uretim">
-  <h2>3. Tarihsel Bilginin Üretim Süreci</h2>
+  <h2>📝 Tarihsel Bilginin Üretim Süreci</h2>
+
+  <img class="topic-photo"
+  src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1100&q=80"
+  alt="Araştırma yapan kişi ve yazılı kaynaklar" loading="lazy">
+
   <p>
     Tarihsel bilgi, geçmişten kalan kaynakların araştırılması,
     incelenmesi ve yorumlanması sonucunda oluşturulur.
-    Tarihçiler bilgileri doğrudan tahmin ederek değil,
-    kanıtlara dayanarak üretirler.
+    Tarihçiler bilgileri tahmin ederek değil, kanıtlara dayanarak üretirler.
   </p>
 
-  <h3>Tarih Araştırmasının Aşamaları</h3>
+  <h3>🔍 Tarih Araştırmasının Aşamaları</h3>
+
   <div class="grid">
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80" alt="Araştırma" loading="lazy">
       <h3>1. Konu Belirleme</h3>
       <p>Araştırılacak tarihî konu veya soru seçilir.</p>
     </div>
+
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=600&q=80" alt="Kütüphane" loading="lazy">
       <h3>2. Kaynaklara Ulaşma</h3>
       <p>Konuyla ilgili belgeler, eserler ve buluntular toplanır.</p>
     </div>
+
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80" alt="Kitap inceleme" loading="lazy">
       <h3>3. Kaynakları İnceleme</h3>
       <p>Kaynakların güvenilirliği ve doğruluğu değerlendirilir.</p>
     </div>
+
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Bilgi karşılaştırma" loading="lazy">
       <h3>4. Bilgileri Karşılaştırma</h3>
       <p>Farklı kaynaklardan gelen bilgiler karşılaştırılır.</p>
     </div>
+
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Araştırma değerlendirme" loading="lazy">
       <h3>5. Yorumlama</h3>
       <p>Kanıtlardan hareketle sonuçlar değerlendirilir.</p>
     </div>
+
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80" alt="Yazı yazma" loading="lazy">
       <h3>6. Sonuçları Yazma</h3>
       <p>Araştırma sonuçları düzenli ve anlaşılır şekilde sunulur.</p>
     </div>
   </div>
 
-  <h3>Tarihî Kaynak Türleri</h3>
+  <h3>📚 Tarihî Kaynak Türleri</h3>
+
+  <img class="topic-photo"
+  src="https://images.unsplash.com/photo-1461360228754-6e81c478b882?auto=format&fit=crop&w=1000&q=80"
+  alt="Tarihî kaynaklar" loading="lazy">
+
   <table>
     <tr><th>Kaynak Türü</th><th>Açıklama</th><th>Örnek</th></tr>
     <tr><td>Yazılı</td><td>Yazı içeren kaynaklardır.</td><td>Kitabeler, mektuplar, antlaşmalar</td></tr>
-    <tr><td>Sözlü</td><td>Dilden dile aktarılan bilgilerdir.</td><td>Destanlar, efsaneler, sözlü anlatımlar</td></tr>
+    <tr><td>Sözlü</td><td>Dilden dile aktarılan bilgilerdir.</td><td>Destanlar, efsaneler</td></tr>
     <tr><td>Görsel</td><td>Görsel bilgi sağlayan kaynaklardır.</td><td>Fotoğraflar, resimler, haritalar</td></tr>
     <tr><td>Maddi</td><td>Geçmişten kalan eşya ve kalıntılardır.</td><td>Silahlar, seramikler, yapılar</td></tr>
   </table>
 
   <h3>Birincil ve İkincil Kaynaklar</h3>
+
   <div class="grid">
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80" alt="Eski kitap" loading="lazy">
       <h3>Birincil Kaynak</h3>
-      <p>
-        Araştırılan dönemden kalan veya olayla doğrudan
-        bağlantılı olan kaynaklardır.
-      </p>
+      <p>Araştırılan dönemden kalan veya olayla doğrudan bağlantılı kaynaklardır.</p>
       <p><strong>Örnek:</strong> Bir savaşa katılmış kişinin mektubu.</p>
     </div>
+
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=600&q=80" alt="Araştırma kitapları" loading="lazy">
       <h3>İkincil Kaynak</h3>
-      <p>
-        Birincil kaynaklardan yararlanılarak daha sonra
-        hazırlanmış çalışmalardır.
-      </p>
+      <p>Birincil kaynaklardan yararlanılarak daha sonra hazırlanmış çalışmalardır.</p>
       <p><strong>Örnek:</strong> Tarihî bir olay hakkında yazılmış araştırma kitabı.</p>
     </div>
   </div>
 
   <div class="note">
     <strong>Akılda Kalsın:</strong>
-    Tarihsel bilgi kanıtlara dayanmalıdır. Kaynakların
-    güvenilirliği sorgulanmadan kesin sonuca ulaşılmamalıdır.
+    Tarihsel bilgi kanıtlara dayanmalıdır. Kaynakların güvenilirliği
+    sorgulanmadan kesin sonuca ulaşılmamalıdır.
   </div>
 </section>
 
+<!-- DİJİTALLEŞME -->
+
 <section id="dijital">
-  <h2>4. Tarih Araştırma ve Yazımında Dijitalleşme</h2>
+  <h2>💻 Tarih Araştırma ve Yazımında Dijitalleşme</h2>
+
+  <img class="topic-photo"
+  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1100&q=80"
+  alt="Dijital araştırma ve bilgisayar" loading="lazy">
+
   <p>
     Teknolojinin gelişmesi tarih araştırmalarını da değiştirmiştir.
-    Günümüzde tarihçiler dijital arşivlerden, elektronik
-    belgelerden ve bilgisayar programlarından yararlanabilmektedir.
+    Günümüzde tarihçiler dijital arşivlerden, elektronik belgelerden
+    ve bilgisayar programlarından yararlanabilmektedir.
   </p>
 
   <h3>Dijitalleşmenin Tarihe Katkıları</h3>
@@ -477,28 +701,40 @@ footer {
   </ul>
 
   <h3>Önemli Dijital Tarih Kavramları</h3>
+
   <div class="grid">
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=600&q=80" alt="Arşiv kitapları" loading="lazy">
       <h3>Dijital Arşiv</h3>
       <p>Belgelerin, fotoğrafların ve kayıtların dijital ortamda saklandığı arşivlerdir.</p>
     </div>
+
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Dijital belgeler" loading="lazy">
       <h3>Dijitalleştirme</h3>
       <p>Basılı veya fiziksel kaynakların dijital ortama aktarılmasıdır.</p>
     </div>
+
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Veri analizi" loading="lazy">
       <h3>Büyük Veri</h3>
       <p>Geleneksel yöntemlerle işlenmesi zor olan çok büyük miktardaki veri topluluklarıdır.</p>
     </div>
+
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Veri analizi ekranı" loading="lazy">
       <h3>Veri Madenciliği</h3>
       <p>Büyük veri kümeleri içerisindeki anlamlı ilişkilerin ve örüntülerin ortaya çıkarılmasıdır.</p>
     </div>
+
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80" alt="Metin okuma" loading="lazy">
       <h3>Yakın Okuma</h3>
       <p>Bir metnin ayrıntılı ve dikkatli biçimde incelenmesidir.</p>
     </div>
+
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Bilgisayarda araştırma" loading="lazy">
       <h3>Uzak Okuma</h3>
       <p>Çok sayıda metnin bilgisayar destekli yöntemlerle genel özelliklerinin incelenmesidir.</p>
     </div>
@@ -507,16 +743,24 @@ footer {
   <div class="note">
     <strong>Dikkat:</strong>
     Dijital ortamda bulunan her bilgi doğru değildir.
-    Tarihçiler internet kaynaklarının güvenilirliğini
-    ve belgelerin doğruluğunu kontrol etmelidir.
+    Tarihçiler internet kaynaklarının güvenilirliğini ve
+    belgelerin doğruluğunu kontrol etmelidir.
   </div>
 </section>
 
+<!-- TEST -->
+
 <section id="test">
   <h2>📝 1. Ünite Değerlendirme Testi</h2>
+
+  <img class="topic-photo"
+  src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1000&q=80"
+  alt="Sınav ve çalışma masası" loading="lazy">
+
   <p>Öğrendiklerini ölçmek için 10 soruyu cevapla.</p>
 
   <form id="quiz">
+
     <div class="question">
       <strong>1. Tarih bilimi neyi inceler?</strong>
       <label><input type="radio" name="q1" value="a"> A) Sadece gelecekteki olayları</label>
@@ -551,69 +795,71 @@ footer {
 
     <div class="question">
       <strong>5. Kazılar yoluyla geçmişin maddi kalıntılarını inceleyen bilim hangisidir?</strong>
-      <label><input type="radio" name="q5" value="a"> A) Paleografya</label>
+      <label><input type="radio" name="q5" value="a"> A) Paleografi</label>
       <label><input type="radio" name="q5" value="b"> B) Arkeoloji</label>
       <label><input type="radio" name="q5" value="c"> C) Kronoloji</label>
       <label><input type="radio" name="q5" value="d"> D) Epigrafi</label>
     </div>
 
     <div class="question">
-      <strong>6. Tarihî olayların kısa sürede gerçekleşen gelişmelerine ne denir?</strong>
+      <strong>6. Kısa sürede gerçekleşen tarihî gelişmelere ne denir?</strong>
       <label><input type="radio" name="q6" value="a"> A) Olgu</label>
       <label><input type="radio" name="q6" value="b"> B) Kültür</label>
       <label><input type="radio" name="q6" value="c"> C) Olay</label>
-      <label><input type="radio" name="q6" value="d"> D) Dönem</label>
+      <label><input type="radio" name="q6" value="d"> D) Kronoloji</label>
     </div>
 
     <div class="question">
-      <strong>7. Orhun Yazıtları hangi bilim dalının inceleme alanına girer?</strong>
+      <strong>7. Taş ve mermer üzerindeki yazıtları hangi bilim inceler?</strong>
       <label><input type="radio" name="q7" value="a"> A) Epigrafi</label>
       <label><input type="radio" name="q7" value="b"> B) Nümismatik</label>
-      <label><input type="radio" name="q7" value="c"> C) Etnografya</label>
-      <label><input type="radio" name="q7" value="d"> D) Coğrafya</label>
+      <label><input type="radio" name="q7" value="c"> C) Sosyoloji</label>
+      <label><input type="radio" name="q7" value="d"> D) Kimya</label>
     </div>
 
     <div class="question">
-      <strong>8. Tarih araştırmalarında ilk yapılması gerekenlerden biri hangisidir?</strong>
-      <label><input type="radio" name="q8" value="a"> A) Sonucu açıklamak</label>
-      <label><input type="radio" name="q8" value="b"> B) Konuyu belirlemek</label>
-      <label><input type="radio" name="q8" value="c"> C) Kitabı bitirmek</label>
-      <label><input type="radio" name="q8" value="d"> D) Sonuçları ezberlemek</label>
+      <strong>8. Eski yazı türlerini inceleyen bilim dalı hangisidir?</strong>
+      <label><input type="radio" name="q8" value="a"> A) Heraldik</label>
+      <label><input type="radio" name="q8" value="b"> B) Paleografi</label>
+      <label><input type="radio" name="q8" value="c"> C) Coğrafya</label>
+      <label><input type="radio" name="q8" value="d"> D) Antropoloji</label>
     </div>
 
     <div class="question">
-      <strong>9. Dijital arşivlerin temel faydası nedir?</strong>
-      <label><input type="radio" name="q9" value="a"> A) Tarihî belgeleri yok etmek</label>
-      <label><input type="radio" name="q9" value="b"> B) Kaynakları gizlemek</label>
-      <label><input type="radio" name="q9" value="c"> C) Belgeleri saklamak ve erişimi kolaylaştırmak</label>
-      <label><input type="radio" name="q9" value="d"> D) Araştırmayı engellemek</label>
+      <strong>9. Tarihî belgelerin güvenilirliğini ve özelliklerini inceleyen bilim hangisidir?</strong>
+      <label><input type="radio" name="q9" value="a"> A) Etnografya</label>
+      <label><input type="radio" name="q9" value="b"> B) Filoloji</label>
+      <label><input type="radio" name="q9" value="c"> C) Diplomatik</label>
+      <label><input type="radio" name="q9" value="d"> D) Arkeoloji</label>
     </div>
 
     <div class="question">
-      <strong>10. Tarihçiler neden farklı kaynakları karşılaştırır?</strong>
-      <label><input type="radio" name="q10" value="a"> A) Araştırmayı uzatmak için</label>
-      <label><input type="radio" name="q10" value="b"> B) Kaynakları yok etmek için</label>
-      <label><input type="radio" name="q10" value="c"> C) Olayları değiştirmek için</label>
-      <label><input type="radio" name="q10" value="d"> D) Bilgilerin doğruluğunu değerlendirmek için</label>
+      <strong>10. Belgelerin dijital ortama aktarılmasına ne denir?</strong>
+      <label><input type="radio" name="q10" value="a"> A) Kronoloji</label>
+      <label><input type="radio" name="q10" value="b"> B) Etnografya</label>
+      <label><input type="radio" name="q10" value="c"> C) Veri madenciliği</label>
+      <label><input type="radio" name="q10" value="d"> D) Dijitalleştirme</label>
     </div>
 
-    <button type="button" onclick="checkQuiz()">Testi Bitir</button>
-    <button type="reset" onclick="resetResult()">Yeniden Başla</button>
+    <button type="button" onclick="checkQuiz()">Cevapları Kontrol Et</button>
+    <button type="reset" onclick="resetResult()">Testi Sıfırla</button>
+
+    <div id="result" aria-live="polite"></div>
   </form>
-
-  <div id="result" aria-live="polite"></div>
 </section>
 
 </main>
 
 <footer>
-  <p>🏛️ Tarih Dünyası | Geçmişi keşfetmeye devam et.</p>
+  <p><strong>🏛️ TARİH DÜNYASI</strong></p>
+  <p>Geçmişi keşfetmeye devam et.</p>
   <p>9. Sınıf Tarih Öğrenme Platformu</p>
 </footer>
 
 <script>
-function checkQuiz() {
-  const answers = {
+function checkQuiz(){
+
+  const answers={
     q1:"b",
     q2:"c",
     q3:"a",
@@ -626,37 +872,54 @@ function checkQuiz() {
     q10:"d"
   };
 
-  let score = 0;
-  let unanswered = 0;
+  let score=0;
+  let unanswered=0;
+  let wrong=[];
 
-  for (let question in answers) {
-    const selected = document.querySelector(
-      'input[name="' + question + '"]:checked'
+  for(let i=1;i<=10;i++){
+
+    const selected=document.querySelector(
+      'input[name="q'+i+'"]:checked'
     );
 
-    if (!selected) {
+    if(!selected){
       unanswered++;
-    } else if (selected.value === answers[question]) {
+    }else if(selected.value===answers["q"+i]){
       score++;
+    }else{
+      wrong.push(i);
     }
   }
 
-  if (unanswered > 0) {
-    document.getElementById("result").textContent =
-      "Lütfen tüm soruları cevapla. Boş soru sayısı: " + unanswered;
+  const result=document.getElementById("result");
+
+  if(unanswered>0){
+    result.innerHTML=
+      "⚠️ Lütfen bütün soruları cevapla. Boş soru sayısı: "+unanswered;
     return;
   }
 
-  document.getElementById("result").textContent =
-    "Sonucun: " + score + " / 10 doğru! " +
-    (score === 10 ? "Mükemmel başarı!" :
-    score >= 7 ? "Çok güzel, devam et!" :
-    score >= 5 ? "Güzel başlangıç, tekrar çalış!" :
-    "Konuları tekrar gözden geçir!");
+  let message="";
+
+  if(score===10){
+    message="🏆 Mükemmel! Bütün soruları doğru yaptın!";
+  }else if(score>=7){
+    message="👏 Çok güzel! Biraz daha çalışarak hepsini yapabilirsin.";
+  }else if(score>=5){
+    message="📚 Güzel bir başlangıç! Konuları tekrar etmeni öneririm.";
+  }else{
+    message="💪 Pes etme! Konuları tekrar edip yeniden deneyebilirsin.";
+  }
+
+  result.innerHTML=
+    "Sonucun: "+score+"/10<br>"+message+
+    (wrong.length>0
+      ?"<br>Yanlış cevap verdiğin sorular: "+wrong.join(", ")
+      :"");
 }
 
-function resetResult() {
-  document.getElementById("result").textContent = "";
+function resetResult(){
+  document.getElementById("result").innerHTML="";
 }
 </script>
 
